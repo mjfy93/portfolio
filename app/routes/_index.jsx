@@ -1,5 +1,6 @@
 import styles from '../styles/home.module.css'
 import { useTheme } from '../context/ThemeContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const meta = () => {
   return [
@@ -19,7 +20,11 @@ export default function Home() {
           onClick={toggleTheme}
           aria-label="Toggle theme"
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+          {theme === 'dark' ? (
+            <img src="/public/sun-icon.svg" alt="Switch to light mode" />
+          ) : (
+            <img src="/public/moon-icon.svg" alt="Switch to dark mode" />
+          )}
         </button>
       )}
     </div>
