@@ -3,11 +3,11 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
   const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark'
+    const savedTheme = localStorage.getItem('theme') || 'light'
     setTheme(savedTheme)
     setIsHydrated(true)
   }, [])
@@ -23,7 +23,7 @@ export function ThemeProvider({ children }) {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, isHydrated }}>
       {children}
     </ThemeContext.Provider>
   )

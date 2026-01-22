@@ -1,20 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import { Links, Meta, Scripts, ScrollRestoration } from 'react-router'
-import Navbar from './nav/Navbar'
-import Footer from './Footer'
-import { useTheme } from '../context/ThemeContext'
+// import Navbar from './nav/Navbar'
+// import Footer from './Footer'
 
 export default function HtmlShell({
   children,
-  title = 'React Router Template'
+  title = 'Portfolio - @mjfy93'
 }) {
-  const { theme } = useTheme()
-
   return (
-    <html
-      lang='en'
-      data-bs-theme={theme}
-    >
+    <html lang='en'>
       <head>
         <meta charSet='UTF-8' />
         <meta
@@ -23,18 +17,26 @@ export default function HtmlShell({
         />
         <meta
           name='description'
-          content='React Router Template with Bootstrap'
+          content='My Portfolio'
         />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link rel="icon" type="image/svg+xml" href="/pen1.svg" />
         <title>{title}</title>
         <Meta />
         <Links />
       </head>
       <body>
-        <Navbar />
+
         {children}
-        <Footer />
+        {/* <Footer /> */}
         <ScrollRestoration />
         <Scripts />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        />
       </body>
     </html>
   )

@@ -1,10 +1,27 @@
+import styles from '../styles/home.module.css'
+import { useTheme } from '../context/ThemeContext'
+
 export const meta = () => {
   return [
-    { title: 'Home - React Router Template' },
-    { name: 'description', content: 'Welcome to My Template!' }
+    { title: 'Portfolio - @mjfy93' },
+    { name: 'description', content: 'My Portfolio' }
   ]
 }
 
 export default function Home() {
-  return <h1>Home</h1>
+  const { theme, toggleTheme, isHydrated } = useTheme()
+
+  return (
+    <div className={`${styles.homeContainer} ${styles[theme]}`}>
+      {isHydrated && (
+        <button
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
+      )}
+    </div>
+  )
 }

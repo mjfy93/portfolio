@@ -6,7 +6,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <HtmlShell>
-        <main className='container mt-4'>
+        <main >
           <Outlet />
         </main>
       </HtmlShell>
