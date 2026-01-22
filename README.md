@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Portfolio
 
 A personal portfolio website built with React Router v7 and Vite, featuring custom icon navigation derived from static imagery.
@@ -90,6 +89,3 @@ MIT
 
 - GitHub: [mjfy93](https://github.com/mjfy93)
 - LinkedIn: [in/mariajoseferroyepes](https://linkedin.com/in/mariajoseferroyepes)
-=======
-# portfolio
->>>>>>> c55fb245c417d4a9fc78ab827adad230a329dab8
