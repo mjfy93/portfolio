@@ -23,7 +23,7 @@ export default function HtmlShell({
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
           rel="stylesheet"
         />
-        <link rel="icon" type="image/svg+xml" href="/pen.svg" />
+        <link rel="icon" type="image/svg+xml" href="./pen-icon.svg" />
         <title>{title}</title>
         <Meta />
         <Links />

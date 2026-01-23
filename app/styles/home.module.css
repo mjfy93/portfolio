@@ -4,15 +4,16 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #282e3d; /* match image edge color to fill gaps */
+  background-color: #282e3d;
+  position: relative;
 }
 
 .light {
-  background-image: url("/img/background2.jpg");
+  background-image: url("/img/background.jpg");
 }
 
 .dark {
-  background-image: url("/img/background-night2.jpg");
+  background-image: url("/img/background-night.jpg");
 }
 
 .themeToggle {
@@ -36,4 +37,111 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Project buttons - adjust position for each */
+.projectButton {
+  position: absolute;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.projectButton:hover {
+  transform: scale(1.05);
+}
+
+.projectButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Position your LOTR button - adjust these values */
+.lotrButton {
+  top: 60px;
+  left: 460px;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: #2a2f3d;
+  color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.modalContent h5 {
+  margin-bottom: 0.5rem;
+}
+
+.modalContent h6 {
+  color: #a0a0a0;
+  margin-bottom: 1rem;
+}
+
+.modalContent ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalContent li {
+  margin-bottom: 0.5rem;
+}
+
+/* Modal buttons */
+.modalButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.iconBtn {
+  padding: 10px 15px;
+  background: #3d4a6b;
+  border: none;
+  border-radius: 6px;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.iconBtn:hover {
+  background: #4d5a7b;
 }
