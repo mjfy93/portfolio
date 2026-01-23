@@ -1,9 +1,7 @@
-import styles from '../styles/home.module.css'
 import { useState } from 'react'
+import styles from '../styles/home.module.css'
 import { useTheme } from '../context/ThemeContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
 
 export const meta = () => {
   return [
@@ -15,35 +13,36 @@ export const meta = () => {
 export default function Home() {
   const { theme, toggleTheme } = useTheme()
   const [activeModal, setActiveModal] = useState(null)
-
   const openModal = (modalName) => setActiveModal(modalName)
   const closeModal = () => setActiveModal(null)
 
   return (
-    <div className={`${styles.homeContainer} ${styles[theme]}`}>
+    <div className={styles.homeContainer}>
+      <div className={`${styles.imageWrapper} ${styles[theme]}`}>
+        <button
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? (
+            <img src="/icons/sun-icon.svg" alt="Switch to light mode" />
+          ) : (
+            <img src="/icons/moon-icon.svg" alt="Switch to dark mode" />
+          )}
+        </button>
 
-      <button
-        className={styles.themeToggle}
-        onClick={toggleTheme}
-        aria-label="Toggle theme"
-      >
-        {theme === 'dark' ? (
-          <img src="/icons/sun-icon.svg" alt="Switch to light mode" />
-        ) : (
-          <img src="/icons/moon-icon.svg" alt="Switch to dark mode" />
-        )}
-      </button>
-      <button
-        className={`${styles.projectButton} ${styles.lotrButton}`}
-        onClick={() => openModal('lotr')}
-        aria-label="LOTR"
-      >
-        {theme === 'dark' ? (
-          <img src="/buttons/tlor-button-dark.jpg" alt="TLOR Encylopedia Dark" />
-        ) : (
-          <img src="/buttons/tlor-button-light.jpg" alt="TLOR Encylopedia Light" />
-        )}
-      </button>
+        <button
+          className={`${styles.projectButton} ${styles.lotrButton}`}
+          onClick={() => openModal('lotr')}
+          aria-label="LOTR"
+        >
+          {theme === 'dark' ? (
+            <img src="/buttons/tlor-button-dark.jpg" alt="TLOR Encyclopedia Dark" />
+          ) : (
+            <img src="/buttons/tlor-button-light.jpg" alt="TLOR Encyclopedia Light" />
+          )}
+        </button>
+      </div>
 
       {activeModal && (
         <div className={styles.modalOverlay} onClick={closeModal}>
@@ -61,12 +60,16 @@ export default function Home() {
                   <li>Responsive design with lazy loading and code splitting</li>
                 </ul>
                 <div className={styles.modalButtons}>
-                  <button className={styles.iconBtn}>
-                    <FontAwesomeIcon icon={['fab', 'github']} /> 
-                  </button>
-                  <button className={styles.iconBtn}>
-                    <FontAwesomeIcon icon="display" /> 
-                  </button>
+                  <a href="https://github.com/mjfy93/LOTR-Blog">
+                    <button className={styles.iconBtn}>
+                      <FontAwesomeIcon icon={['fab', 'github']} /> Code
+                    </button>
+                  </a>
+                  <a href="https://lotr-blog.vercel.app/">
+                    <button className={styles.iconBtn} >
+                      <FontAwesomeIcon icon="display" /> Demo
+                    </button>
+                  </a>
                 </div>
               </div>
             )}
