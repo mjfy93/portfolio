@@ -7,7 +7,8 @@ import {
   faUser,
   faEnvelope,
   faLink,
-  faDisplay
+  faDisplay,
+  faBook
 
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -22,7 +23,7 @@ library.add(
   faGithub,
   faLinkedin,
   faLink,
-  
+  faBook
 )
 
 // Export for potential direct use if needed
@@ -34,7 +35,7 @@ export {
   faDisplay,
   faGithub,
   faLinkedin,
-  faLink
+  faLink,faBook
 }
 
 // When using the icon, just use the name in lowercase, no 'fa'
