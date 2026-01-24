@@ -1,0 +1,47 @@
+.imageWrapper {
+  position: relative;
+  width: 1344px;
+  height: 768px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.light {
+  background-image: url("/img/background.jpg");
+}
+
+.dark {
+  background-image: url("/img/background-night.jpg");
+}
+
+.projectButton {
+  position: absolute;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.projectButton:hover {
+  transform: scale(1.1);
+}
+
+.projectButton img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    display: none;
+  }
+}
