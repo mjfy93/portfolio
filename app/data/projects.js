@@ -59,3 +59,21 @@ export const profile = {
         linkedin: 'https://linkedin.com/in/mariajoseferroyepes'
     }
 }
+
+export const certificates = [
+    {
+        id: '4geeks ',
+        name: '4Geeks Bootcamp',
+        description: '360-hour intensive bootcamp',
+        techStack: [
+            'Front-end: HTML/​CSS, JavaScript, React.js, React Router, Bootstrap',
+            'Back - end: Python, Flask, RESTful APIs, SQL, Object - Oriented Programming',
+            'Tools & Practices: Git / GitHub, Command Line, Unit Testing(Jest)'
+        ],
+        link: 'https://certificate.4geeks.com/fc6cb0a39163f4321c049fc0c2ce3f19ca770b66',
+        images: {
+            light: '/certificates/4geeks-bootcamp-light.png',
+            dark: '/certificates/4geeks-bootcamp-dark.png'
+        }
+    }
+]
