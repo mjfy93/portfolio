@@ -8,8 +8,10 @@ export default function DesktopLayout({
     toggleTheme,
     profile,
     projects,
+    certificates,
     onOpenAbout,
-    onOpenProject
+    onOpenProject,
+    onOpenCertificates
 }) {
     return (
         <div className={`${styles.imageWrapper} ${styles[theme]}`}>
@@ -31,6 +33,24 @@ export default function DesktopLayout({
                     onClick={() => onOpenProject(project)}
                 />
             ))}
+
+            <button
+                className={styles.certificateBtn}
+                style={{
+                    position: 'absolute',
+                    top: certificates.position.top,
+                    left: certificates.position.left,
+                    height: certificates.position.height,
+                    width: certificates.position.width
+                }}
+                onClick={onOpenCertificates}
+            >
+                <img
+                    src={theme === 'dark' ? certificates.buttonImages.dark : certificates.buttonImages.light}
+                    alt="Certificates"
+                    style={{ height: '100%', width: 'auto' }}
+                />
+            </button>
         </div>
     )
 }

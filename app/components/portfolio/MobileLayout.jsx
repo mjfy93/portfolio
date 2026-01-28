@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from '../../styles/mobile.module.css'
 import ThemeToggle from './ThemeToggle'
 import TitleButton from './TitleButton'
@@ -8,8 +9,10 @@ export default function MobileLayout({
     toggleTheme,
     profile,
     projects,
+    certificates,
     onOpenAbout,
-    onOpenProject
+    onOpenProject,
+    onOpenCertificates
 }) {
     return (
         <div className={`${styles.mobileWrapper} ${styles[theme]}`}>
@@ -27,6 +30,15 @@ export default function MobileLayout({
                         onClick={() => onOpenProject(project)}
                     />
                 ))}
+                <button
+                    className={styles.mobileProjectButton}
+                    style={{
+                        background: theme === 'dark' ? certificates.mobileColor.dark : certificates.mobileColor.light
+                    }}
+                    onClick={onOpenCertificates}
+                >
+                    <FontAwesomeIcon icon={certificates.icon} /> {certificates.shortName}
+                </button>
             </div>
 
             <ThemeToggle

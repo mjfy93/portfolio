@@ -88,3 +88,40 @@ export function AboutModal({ profile, isOpen, onClose }) {
         </Modal>
     )
 }
+
+export function CertificatesModal({ certificates, isOpen, onClose, theme }) {
+    return (
+        <Modal isOpen={isOpen} onClose={onClose}>
+            <h5>Certificates & Accolades</h5>
+            <div className={styles.certificatesList}>
+                {certificates.map((cert) => (
+                    <div key={cert.id} className={styles.certificateCard}>
+                        <div className={styles.certificateHeader}>
+                            <h6>{cert.name}</h6>
+                            <p>{cert.description}</p>
+                        </div>
+                        {cert.images && (
+                            <img
+                                className={styles.certificateImage}
+                                src={theme === 'dark' ? cert.images.dark : cert.images.light}
+                                alt={cert.name}
+                            />
+                        )}
+                        <ul>
+                            {cert.techStack.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                        <div className={styles.modalButtons}>
+                            <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                                <button className={styles.iconBtn}>
+                                    <FontAwesomeIcon icon="certificate" /> View Certificate
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </Modal>
+    )
+}

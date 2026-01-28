@@ -40,6 +40,24 @@
   object-fit: contain;
 }
 
+.certificateBtn {
+  position: absolute;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.certificateBtn:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 480px) {
   .imageWrapper {
     display: none;
