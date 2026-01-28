@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../../styles/modal.module.css'
 
@@ -90,38 +91,71 @@ export function AboutModal({ profile, isOpen, onClose }) {
 }
 
 export function CertificatesModal({ certificates, isOpen, onClose, theme }) {
+    const [selectedCert, setSelectedCert] = useState(null)
+
+    const handleClose = () => {
+        setSelectedCert(null)
+        onClose()
+    }
+
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
-            <h5>Certificates & Accolades</h5>
-            <div className={styles.certificatesList}>
-                {certificates.map((cert) => (
-                    <div key={cert.id} className={styles.certificateCard}>
+        <>
+            <Modal isOpen={isOpen && !selectedCert} onClose={handleClose}>
+                <h5>Certificates</h5>
+                <div className={styles.certificateGallery}>
+                    {certificates.map((cert) => (
+                        <button
+                            key={cert.id}
+                            className={styles.certificateGalleryItem}
+                            onClick={() => setSelectedCert(cert)}
+                        >
+                            {cert.images && (
+                                <img
+                                    src={theme === 'dark' ? cert.images.dark : cert.images.light}
+                                    alt={cert.name}
+                                />
+                            )}
+                            <span className={styles.certificateGalleryLabel}>{cert.name}</span>
+                        </button>
+                    ))}
+                </div>
+            </Modal>
+
+            <Modal isOpen={!!selectedCert} onClose={() => setSelectedCert(null)}>
+                {selectedCert && (
+                    <div className={styles.certificateDetail}>
+                        <button
+                            className={styles.backBtn}
+                            onClick={() => setSelectedCert(null)}
+                        >
+                            <FontAwesomeIcon icon="arrow-left" /> Back to Gallery
+                        </button>
                         <div className={styles.certificateHeader}>
-                            <h6>{cert.name}</h6>
-                            <p>{cert.description}</p>
+                            <h6>{selectedCert.name}</h6>
+                            <p>{selectedCert.description}</p>
                         </div>
-                        {cert.images && (
+                        {selectedCert.images && (
                             <img
                                 className={styles.certificateImage}
-                                src={theme === 'dark' ? cert.images.dark : cert.images.light}
-                                alt={cert.name}
+                                src={theme === 'dark' ? selectedCert.images.dark : selectedCert.images.light}
+                                alt={selectedCert.name}
                             />
                         )}
                         <ul>
-                            {cert.techStack.map((item, index) => (
+                            {selectedCert.techStack.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                         <div className={styles.modalButtons}>
-                            <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                            <a href={selectedCert.link} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
                                     <FontAwesomeIcon icon="certificate" /> View Certificate
                                 </button>
                             </a>
                         </div>
                     </div>
-                ))}
-            </div>
-        </Modal>
+                )}
+            </Modal>
+        </>
     )
 }
