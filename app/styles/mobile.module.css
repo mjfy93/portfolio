@@ -14,12 +14,70 @@
     background-repeat: no-repeat;
   }
 
+  .statusBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: env(safe-area-inset-top, 8px) 16px 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+
+  .light .statusBar {
+    color: #2a2f3d;
+  }
+
+  .dark .statusBar {
+    color: #e0e0e0;
+  }
+
+  .statusBarBattery {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .statusBarCharging {
+    font-size: 0.6rem;
+    margin-left: -2px;
+  }
+
   .mobileWrapper.light {
     background-image: url("/img/backgroundlight-mobile.png");
   }
 
   .mobileWrapper.dark {
     background-image: url("/img/backgrounddark-mobile.png");
+  }
+
+  .mobileTopButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px 0;
+  }
+
+  .mobileFullWidthButton {
+    width: 100%;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 60px;
+    backdrop-filter: blur(4px);
+  }
+
+  .mobileFullWidthButton:hover {
+    transform: scale(1.03);
   }
 
   .mobileButtonGrid {

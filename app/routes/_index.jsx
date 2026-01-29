@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
-import { projects, profile, certificates } from '../data/projects'
+import { projects } from '../data/projects'
+import { profile, certificates } from '../data/profile'
 import DesktopLayout from '../components/portfolio/DesktopLayout'
 import MobileLayout from '../components/portfolio/MobileLayout'
 import { ProjectModal, AboutModal, CertificatesModal } from '../components/portfolio/Modal'
@@ -65,7 +66,6 @@ export default function Home() {
         certificates={certificates.items}
         isOpen={certificatesOpen}
         onClose={closeCertificates}
-        theme={theme}
       />
     </div>
   )

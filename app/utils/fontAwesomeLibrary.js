@@ -8,8 +8,14 @@ import {
   faEnvelope,
   faLink,
   faDisplay,
-  faBook
-
+  faBook,
+  faBatteryFull,
+  faBatteryThreeQuarters,
+  faBatteryHalf,
+  faBatteryQuarter,
+  faBatteryEmpty,
+  faBolt,
+  faCertificate
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -23,7 +29,14 @@ library.add(
   faGithub,
   faLinkedin,
   faLink,
-  faBook
+  faBook,
+  faBatteryFull,
+  faBatteryThreeQuarters,
+  faBatteryHalf,
+  faBatteryQuarter,
+  faBatteryEmpty,
+  faBolt,
+  faCertificate
 )
 
 // Export for potential direct use if needed
@@ -35,7 +48,15 @@ export {
   faDisplay,
   faGithub,
   faLinkedin,
-  faLink,faBook
+  faLink,
+  faBook,
+  faBatteryFull,
+  faBatteryThreeQuarters,
+  faBatteryHalf,
+  faBatteryQuarter,
+  faBatteryEmpty,
+  faBolt,
+  faCertificate
 }
 
 // When using the icon, just use the name in lowercase, no 'fa'

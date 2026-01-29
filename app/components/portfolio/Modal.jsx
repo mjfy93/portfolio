@@ -90,7 +90,7 @@ export function AboutModal({ profile, isOpen, onClose }) {
     )
 }
 
-export function CertificatesModal({ certificates, isOpen, onClose, theme }) {
+export function CertificatesModal({ certificates, isOpen, onClose }) {
     const [selectedCert, setSelectedCert] = useState(null)
 
     const handleClose = () => {
@@ -109,9 +109,9 @@ export function CertificatesModal({ certificates, isOpen, onClose, theme }) {
                             className={styles.certificateGalleryItem}
                             onClick={() => setSelectedCert(cert)}
                         >
-                            {cert.images && (
+                            {cert.image && (
                                 <img
-                                    src={theme === 'dark' ? cert.images.dark : cert.images.light}
+                                    src={cert.image}
                                     alt={cert.name}
                                 />
                             )}
@@ -134,10 +134,10 @@ export function CertificatesModal({ certificates, isOpen, onClose, theme }) {
                             <h6>{selectedCert.name}</h6>
                             <p>{selectedCert.description}</p>
                         </div>
-                        {selectedCert.images && (
+                        {selectedCert.image && (
                             <img
                                 className={styles.certificateImage}
-                                src={theme === 'dark' ? selectedCert.images.dark : selectedCert.images.light}
+                                src={selectedCert.image}
                                 alt={selectedCert.name}
                             />
                         )}

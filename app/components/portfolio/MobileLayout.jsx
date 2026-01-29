@@ -3,6 +3,7 @@ import styles from '../../styles/mobile.module.css'
 import ThemeToggle from './ThemeToggle'
 import TitleButton from './TitleButton'
 import MobileProjectButton from './MobileProjectButton'
+import StatusBar from './StatusBar'
 
 export default function MobileLayout({
     theme,
@@ -16,10 +17,23 @@ export default function MobileLayout({
 }) {
     return (
         <div className={`${styles.mobileWrapper} ${styles[theme]}`}>
-            <TitleButton
-                handle={profile.handle}
-                onClick={onOpenAbout}
-            />
+            <StatusBar />
+
+            <div className={styles.mobileTopButtons}>
+                <TitleButton
+                    handle={profile.handle}
+                    onClick={onOpenAbout}
+                />
+                <button
+                    className={styles.mobileFullWidthButton}
+                    style={{
+                        background: theme === 'dark' ? certificates.mobileColor.dark : certificates.mobileColor.light
+                    }}
+                    onClick={onOpenCertificates}
+                >
+                    <FontAwesomeIcon icon={certificates.icon} /> {certificates.shortName}
+                </button>
+            </div>
 
             <div className={styles.mobileButtonGrid}>
                 {projects.map((project) => (
@@ -30,15 +44,6 @@ export default function MobileLayout({
                         onClick={() => onOpenProject(project)}
                     />
                 ))}
-                <button
-                    className={styles.mobileProjectButton}
-                    style={{
-                        background: theme === 'dark' ? certificates.mobileColor.dark : certificates.mobileColor.light
-                    }}
-                    onClick={onOpenCertificates}
-                >
-                    <FontAwesomeIcon icon={certificates.icon} /> {certificates.shortName}
-                </button>
             </div>
 
             <ThemeToggle
