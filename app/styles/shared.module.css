@@ -127,8 +127,8 @@
     typing1 1s steps(10) forwards;
 }
 
-.titleLine:last-child {
-  animation: 
+.titleLine:nth-child(2) {
+  animation:
     typing2 0.9s steps(9) 1s forwards,
     blink 0.7s step-end 1s infinite;
 }

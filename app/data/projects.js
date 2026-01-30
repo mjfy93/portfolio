@@ -2,7 +2,7 @@ export const projects = [
     {
         id: 'lotr',
         name: 'LOTR Encylopedia',
-        shortName: ' LOTR',
+        shortName: ' LOTR Encyclopedia',
         description: 'Modern LOTR Encylopedia with Advanced Animations',
         features: [
             'Built with React Router v7 (SSR), Vite, and CSS Modules',
