@@ -66,6 +66,53 @@
   transform: scale(1.1);
 }
 
+.aboutMeBtn {
+  position: absolute;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.aboutMeBtn:hover {
+  transform: scale(1.1);
+}
+
+.aboutMeBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: solid 1px white;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #e0e0e0;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.projectButton:hover .tooltip,
+.certificateBtn:hover .tooltip,
+.aboutMeBtn:hover .tooltip {
+  opacity: 1;
+}
+
 @media (max-width: 480px) {
   .imageWrapper {
     display: none;

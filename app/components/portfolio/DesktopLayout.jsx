@@ -2,6 +2,7 @@ import styles from '../../styles/desktop.module.css'
 import ThemeToggle from './ThemeToggle'
 import TitleButton from './TitleButton'
 import ProjectButton from './ProjectButton'
+import AboutMeButton from './AboutMeButton'
 
 export default function DesktopLayout({
     theme,
@@ -11,12 +12,19 @@ export default function DesktopLayout({
     certificates,
     onOpenAbout,
     onOpenProject,
-    onOpenCertificates
+    onOpenCertificates,
+    onOpenPortfolioInfo
 }) {
     return (
         <div className={`${styles.imageWrapper} ${styles[theme]}`}>
             <TitleButton
                 handle={profile.handle}
+                onClick={onOpenPortfolioInfo}
+            />
+
+            <AboutMeButton
+                profile={profile}
+                theme={theme}
                 onClick={onOpenAbout}
             />
 
@@ -50,6 +58,7 @@ export default function DesktopLayout({
                     alt="Certificates"
                     style={{ height: '100%', width: 'auto' }}
                 />
+                <span className={styles.tooltip}>{certificates.shortName}</span>
             </button>
         </div>
     )

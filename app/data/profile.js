@@ -17,6 +17,26 @@ export const profile = {
     links: {
         github: 'https://github.com/mjfy93',
         linkedin: 'https://linkedin.com/in/mariajoseferroyepes'
+    },
+    portfolioTechStack: ['React Router v7', 'Vite', 'CSS Modules'],
+    portfolioRepo: 'https://github.com/mjfy93/portfolio',
+    aboutButton: {
+        buttonImages: {
+            light: '/buttons/photo-light.jpg',
+            dark: '/buttons/photo-dark.jpg'
+        },
+        position: {
+            top: '422px',
+            left: '72.5px',
+            width: '73px',
+            height: '91px'
+        },
+        mobileColor: {
+            light: 'rgba(0, 0, 0, 0.35)',
+            dark: 'rgba(0, 0, 0, 0.45)'
+        },
+        icon: 'user',
+        shortName: 'About Me'
     }
 }
 

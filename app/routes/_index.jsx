@@ -4,7 +4,7 @@ import { projects } from '../data/projects'
 import { profile, certificates } from '../data/profile'
 import DesktopLayout from '../components/portfolio/DesktopLayout'
 import MobileLayout from '../components/portfolio/MobileLayout'
-import { ProjectModal, AboutModal, CertificatesModal } from '../components/portfolio/Modal'
+import { ProjectModal, AboutModal, PortfolioInfoModal, CertificatesModal } from '../components/portfolio/Modal'
 import styles from '../styles/shared.module.css'
 
 export const meta = () => {
@@ -19,6 +19,7 @@ export default function Home() {
   const [activeProject, setActiveProject] = useState(null)
   const [aboutOpen, setAboutOpen] = useState(false)
   const [certificatesOpen, setCertificatesOpen] = useState(false)
+  const [portfolioInfoOpen, setPortfolioInfoOpen] = useState(false)
 
   const openProject = (project) => setActiveProject(project)
   const closeProject = () => setActiveProject(null)
@@ -26,6 +27,8 @@ export default function Home() {
   const closeAbout = () => setAboutOpen(false)
   const openCertificates = () => setCertificatesOpen(true)
   const closeCertificates = () => setCertificatesOpen(false)
+  const openPortfolioInfo = () => setPortfolioInfoOpen(true)
+  const closePortfolioInfo = () => setPortfolioInfoOpen(false)
 
   return (
     <div className={styles.homeContainer}>
@@ -38,6 +41,7 @@ export default function Home() {
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
+        onOpenPortfolioInfo={openPortfolioInfo}
       />
 
       <MobileLayout
@@ -49,6 +53,7 @@ export default function Home() {
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
+        onOpenPortfolioInfo={openPortfolioInfo}
       />
 
       <ProjectModal
@@ -66,6 +71,12 @@ export default function Home() {
         certificates={certificates.items}
         isOpen={certificatesOpen}
         onClose={closeCertificates}
+      />
+
+      <PortfolioInfoModal
+        profile={profile}
+        isOpen={portfolioInfoOpen}
+        onClose={closePortfolioInfo}
       />
     </div>
   )

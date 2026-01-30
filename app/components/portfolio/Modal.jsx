@@ -65,8 +65,17 @@ export function ProjectModal({ project, onClose }) {
 export function AboutModal({ profile, isOpen, onClose }) {
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
-            <h5>{profile.fullName}</h5>
-            <h6>{profile.title}</h6>
+            <div className={styles.modalHeader}>
+                <div className={styles.modalTitleSection}>
+                    <h5>{profile.fullName}</h5>
+                    <h6>{profile.title}</h6>
+                </div>
+                <img
+                    className={styles.aboutPhoto}
+                    src={profile.aboutButton.buttonImages.light}
+                    alt={profile.fullName}
+                />
+            </div>
             <p>{profile.bio}</p>
             <p><strong>Tech Stack:</strong></p>
             <p>{profile.techStack.join(', ')}</p>
@@ -82,6 +91,28 @@ export function AboutModal({ profile, isOpen, onClose }) {
                     <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
                         <button className={styles.iconBtn}>
                             <FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn
+                        </button>
+                    </a>
+                )}
+            </div>
+        </Modal>
+    )
+}
+
+export function PortfolioInfoModal({ profile, isOpen, onClose }) {
+    return (
+        <Modal isOpen={isOpen} onClose={onClose}>
+            <h5>Built With</h5>
+            <ul>
+                {profile.portfolioTechStack.map((tech, index) => (
+                    <li key={index}>{tech}</li>
+                ))}
+            </ul>
+            <div className={styles.modalButtons}>
+                {profile.portfolioRepo && (
+                    <a href={profile.portfolioRepo} target="_blank" rel="noopener noreferrer">
+                        <button className={styles.iconBtn}>
+                            <FontAwesomeIcon icon={['fab', 'github']} /> Code
                         </button>
                     </a>
                 )}

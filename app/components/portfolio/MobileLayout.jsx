@@ -13,7 +13,8 @@ export default function MobileLayout({
     certificates,
     onOpenAbout,
     onOpenProject,
-    onOpenCertificates
+    onOpenCertificates,
+    onOpenPortfolioInfo
 }) {
     return (
         <div className={`${styles.mobileWrapper} ${styles[theme]}`}>
@@ -22,8 +23,17 @@ export default function MobileLayout({
             <div className={styles.mobileTopButtons}>
                 <TitleButton
                     handle={profile.handle}
-                    onClick={onOpenAbout}
+                    onClick={onOpenPortfolioInfo}
                 />
+                <button
+                    className={styles.mobileFullWidthButton}
+                    style={{
+                        background: theme === 'dark' ? profile.aboutButton.mobileColor.dark : profile.aboutButton.mobileColor.light
+                    }}
+                    onClick={onOpenAbout}
+                >
+                    <FontAwesomeIcon icon={profile.aboutButton.icon} /> {profile.aboutButton.shortName}
+                </button>
                 <button
                     className={styles.mobileFullWidthButton}
                     style={{

@@ -9,6 +9,7 @@ export default function TitleButton({ handle, onClick }) {
         >
             <span className={styles.titleLine}>{handle}'s</span>
             <span className={styles.titleLine}>Portfolio</span>
+            <span className={styles.titleTooltip}>Tech Stack</span>
         </button>
     )
 }
