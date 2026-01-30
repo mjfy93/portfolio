@@ -18,7 +18,7 @@ export const profile = {
         github: 'https://github.com/mjfy93',
         linkedin: 'https://linkedin.com/in/mariajoseferroyepes'
     },
-    portfolioTechStack: ['React Router v7', 'Vite', 'CSS Modules'],
+    portfolioTechStack: ['React Router v7', 'Vite', 'CSS Modules', 'FontAwesome'],
     portfolioRepo: 'https://github.com/mjfy93/portfolio',
     aboutButton: {
         buttonImages: {
