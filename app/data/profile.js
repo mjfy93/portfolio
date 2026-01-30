@@ -69,6 +69,13 @@ export const certificates = {
             ],
             link: 'https://certificate.4geeks.com/fc6cb0a39163f4321c049fc0c2ce3f19ca770b66',
             image: '/certificates/4geeks-bootcamp.png'
+        },
+        {
+            id: 'efset',
+            name: 'EF SET English Certificate',
+            description: "Comprehensive, internationally-recognized English proficiency test. Reading, Listening, Writing and Speaking, all tested in a thorough 90-minute adaptive exam that adjusts the difficulty according to the tester's abilities.",
+            link: "https://cert.efset.org/YKSU8S",
+            image: '/certificates/efset-english-certificate.png'
         }
         //New certificates here - follow same structure
     ]
