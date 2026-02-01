@@ -5,12 +5,26 @@ export const profile = {
     title: 'Full Stack Developer',
     bio: 'Developer with a background in translation. Passionate about building clean, user-friendly web applications.',
     techStack: [
-        'React',
-        'JavaScript',
-        'Python',
+        'Bootstrap',
+        'CAT Tools',
+        'Claude AI',
+        'CSS Modules',
         'Flask',
+        'Github',
+        'GSAP',
+        'Interpretation',
+        'JavaScript',
+        'Postman',
+        'Python',
+        'RESTful API',
+        'React-Router',
+        'React Bits',
         'SQL',
+        'SQL Alchemy',
+        'Translation',
         'TypeScript',
+        'Vercel',
+        'WebGL'
         // 'Angular',
         // 'Next.js'
     ],
@@ -18,7 +32,7 @@ export const profile = {
         github: 'https://github.com/mjfy93',
         linkedin: 'https://linkedin.com/in/mariajoseferroyepes'
     },
-    portfolioTechStack: ['React Router v7', 'Vite', 'CSS Modules', 'FontAwesome'],
+    portfolioTechStack: ['React Router v7', 'Vite', 'CSS Modules', 'FontAwesome', 'Custom Made Icons', 'Dynamic Display (Mobile/Desktop)'],
     portfolioRepo: 'https://github.com/mjfy93/portfolio',
     aboutButton: {
         buttonImages: {
@@ -74,9 +88,27 @@ export const certificates = {
             id: 'efset',
             name: 'EF SET English Certificate',
             description: "Comprehensive, internationally-recognized English proficiency test. Reading, Listening, Writing and Speaking, all tested in a thorough 90-minute adaptive exam that adjusts the difficulty according to the tester's abilities.",
+            techStack: [
+                'Reading',
+                'Writing',
+                'Speaking',
+                'Listening'
+            ],
             link: "https://cert.efset.org/YKSU8S",
             image: '/certificates/efset-english-certificate.png'
-        }
+        }, {
+            id: 'career-essentials',
+            name: 'Career Essentials in Software Development by Microsoft & LinkedIn',
+            description: "A course desgined to discover the skills needed for a career in software development, to learn the core concepts and structure of programming languages and learn how they are applied. Taught by Annyce Davis, Sasha Vodnik, Olivia Chiu Stone and Barron Stone.",
+            techStack: [
+                'Develop an understanding of programming core concepts',
+                'Discover the structure of programming languages',
+                'Learn foundational programming concepts, practices, and terminology'
+            ],
+            link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
+            image: '/certificates/microsoft-career-essentials.png'
+        },
+
         //New certificates here - follow same structure
     ]
 }

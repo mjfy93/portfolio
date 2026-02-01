@@ -55,6 +55,20 @@ export function ProjectModal({ project, onClose }) {
                                 </button>
                             </a>
                         )}
+                        {project.links.english && (
+                            <a href={project.links.english} target="_blank" rel="noopener noreferrer">
+                                <button className={styles.iconBtn}>
+                                    <FontAwesomeIcon icon="file-pdf" /> English
+                                </button>
+                            </a>
+                        )}
+                        {project.links.spanish && (
+                            <a href={project.links.spanish} target="_blank" rel="noopener noreferrer">
+                                <button className={styles.iconBtn}>
+                                    <FontAwesomeIcon icon="file-pdf" /> Español
+                                </button>
+                            </a>
+                        )}
                     </div>
                 </div>
             )}

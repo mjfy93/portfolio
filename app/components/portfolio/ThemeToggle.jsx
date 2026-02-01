@@ -10,10 +10,13 @@ export default function ThemeToggle({ theme, toggleTheme, isMobile = false }) {
             aria-label="Toggle theme"
         >
             {theme === 'dark' ? (
-                <img src="/icons/sun-icon.svg" alt="Switch to light mode" />
+                <img src="/buttons/off-switch.png" alt="Switch to light mode" />
             ) : (
-                <img src="/icons/moon-icon.svg" alt="Switch to dark mode" />
+                <img src="/buttons/on-switch.png" alt="Switch to dark mode" />
             )}
+            <span className={styles.themeTooltip}>
+                {theme === 'dark' ? 'Lights On' : 'Lights Off'}
+            </span>
         </button>
     )
 }

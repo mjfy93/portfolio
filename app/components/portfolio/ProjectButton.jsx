@@ -5,7 +5,8 @@ export default function ProjectButton({ project, theme, onClick }) {
         top: project.position.top,
         left: project.position.left,
         width: project.position.width,
-        height: project.position.height
+        height: project.position.height,
+        border: project.position.border
     }
 
     return (
