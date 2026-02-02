@@ -15,7 +15,7 @@ export default function Modal({ isOpen, onClose, children }) {
     )
 }
 
-export function ProjectModal({ project, onClose }) {
+export function ProjectModal({ project, onClose, ui }) {
     return (
         <Modal isOpen={!!project} onClose={onClose}>
             {project && (
@@ -44,28 +44,28 @@ export function ProjectModal({ project, onClose }) {
                         {project.links.github && (
                             <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon={['fab', 'github']} /> Code
+                                    <FontAwesomeIcon icon={['fab', 'github']} /> {ui.code}
                                 </button>
                             </a>
                         )}
                         {project.links.demo && (
                             <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon="display" /> Live Site
+                                    <FontAwesomeIcon icon="display" /> {ui.liveSite}
                                 </button>
                             </a>
                         )}
                         {project.links.english && (
                             <a href={project.links.english} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon="file-pdf" /> English
+                                    <FontAwesomeIcon icon="file-pdf" /> {ui.english}
                                 </button>
                             </a>
                         )}
                         {project.links.spanish && (
                             <a href={project.links.spanish} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon="file-pdf" /> Español
+                                    <FontAwesomeIcon icon="file-pdf" /> {ui.spanish}
                                 </button>
                             </a>
                         )}
@@ -76,7 +76,7 @@ export function ProjectModal({ project, onClose }) {
     )
 }
 
-export function AboutModal({ profile, isOpen, onClose }) {
+export function AboutModal({ profile, isOpen, onClose, ui }) {
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
             <div className={styles.modalHeader}>
@@ -91,20 +91,20 @@ export function AboutModal({ profile, isOpen, onClose }) {
                 />
             </div>
             <p>{profile.bio}</p>
-            <p><strong>Tech Stack:</strong></p>
+            <p><strong>{ui.techStackLabel}</strong></p>
             <p>{profile.techStack.join(', ')}</p>
             <div className={styles.modalButtons}>
                 {profile.links.github && (
                     <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
                         <button className={styles.iconBtn}>
-                            <FontAwesomeIcon icon={['fab', 'github']} /> GitHub
+                            <FontAwesomeIcon icon={['fab', 'github']} /> {ui.github}
                         </button>
                     </a>
                 )}
                 {profile.links.linkedin && (
                     <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
                         <button className={styles.iconBtn}>
-                            <FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn
+                            <FontAwesomeIcon icon={['fab', 'linkedin']} /> {ui.linkedin}
                         </button>
                     </a>
                 )}
@@ -113,10 +113,10 @@ export function AboutModal({ profile, isOpen, onClose }) {
     )
 }
 
-export function PortfolioInfoModal({ profile, isOpen, onClose }) {
+export function PortfolioInfoModal({ profile, isOpen, onClose, ui }) {
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
-            <h5>Built With</h5>
+            <h5>{ui.builtWith}</h5>
             <ul>
                 {profile.portfolioTechStack.map((tech, index) => (
                     <li key={index}>{tech}</li>
@@ -126,7 +126,7 @@ export function PortfolioInfoModal({ profile, isOpen, onClose }) {
                 {profile.portfolioRepo && (
                     <a href={profile.portfolioRepo} target="_blank" rel="noopener noreferrer">
                         <button className={styles.iconBtn}>
-                            <FontAwesomeIcon icon={['fab', 'github']} /> Code
+                            <FontAwesomeIcon icon={['fab', 'github']} /> {ui.code}
                         </button>
                     </a>
                 )}
@@ -135,7 +135,7 @@ export function PortfolioInfoModal({ profile, isOpen, onClose }) {
     )
 }
 
-export function CertificatesModal({ certificates, isOpen, onClose }) {
+export function CertificatesModal({ certificates, isOpen, onClose, ui }) {
     const [selectedCert, setSelectedCert] = useState(null)
 
     const handleClose = () => {
@@ -146,7 +146,7 @@ export function CertificatesModal({ certificates, isOpen, onClose }) {
     return (
         <>
             <Modal isOpen={isOpen && !selectedCert} onClose={handleClose}>
-                <h5>Certificates</h5>
+                <h5>{ui.certificates}</h5>
                 <div className={styles.certificateGallery}>
                     {certificates.map((cert) => (
                         <button
@@ -173,7 +173,7 @@ export function CertificatesModal({ certificates, isOpen, onClose }) {
                             className={styles.backBtn}
                             onClick={() => setSelectedCert(null)}
                         >
-                            <FontAwesomeIcon icon="arrow-left" /> Back to Gallery
+                            <FontAwesomeIcon icon="arrow-left" /> {ui.backToGallery}
                         </button>
                         <div className={styles.certificateHeader}>
                             <h6>{selectedCert.name}</h6>
@@ -194,7 +194,7 @@ export function CertificatesModal({ certificates, isOpen, onClose }) {
                         <div className={styles.modalButtons}>
                             <a href={selectedCert.link} target="_blank" rel="noopener noreferrer">
                                 <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon="certificate" /> View Certificate
+                                    <FontAwesomeIcon icon="certificate" /> {ui.viewCertificate}
                                 </button>
                             </a>
                         </div>

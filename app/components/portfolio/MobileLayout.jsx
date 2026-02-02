@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from '../../styles/mobile.module.css'
 import ThemeToggle from './ThemeToggle'
+import LanguageToggle from './LanguageToggle'
 import TitleButton from './TitleButton'
 import MobileProjectButton from './MobileProjectButton'
 import StatusBar from './StatusBar'
 
 export default function MobileLayout({
     theme,
-    toggleTheme,
     profile,
     projects,
     certificates,
+    ui,
     onOpenAbout,
     onOpenProject,
     onOpenCertificates,
@@ -22,8 +23,8 @@ export default function MobileLayout({
 
             <div className={styles.mobileTopButtons}>
                 <TitleButton
-                    handle={profile.handle}
                     onClick={onOpenPortfolioInfo}
+                    ui={ui}
                 />
                 <button
                     className={styles.mobileFullWidthButton}
@@ -56,11 +57,8 @@ export default function MobileLayout({
                 ))}
             </div>
 
-            <ThemeToggle
-                theme={theme}
-                toggleTheme={toggleTheme}
-                isMobile={true}
-            />
+            <ThemeToggle ui={ui} isMobile={true} />
+            <LanguageToggle isMobile={true} />
         </div>
     )
 }

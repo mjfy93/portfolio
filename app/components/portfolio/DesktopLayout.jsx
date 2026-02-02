@@ -1,15 +1,16 @@
 import styles from '../../styles/desktop.module.css'
 import ThemeToggle from './ThemeToggle'
+import LanguageToggle from './LanguageToggle'
 import TitleButton from './TitleButton'
 import ProjectButton from './ProjectButton'
 import AboutMeButton from './AboutMeButton'
 
 export default function DesktopLayout({
     theme,
-    toggleTheme,
     profile,
     projects,
     certificates,
+    ui,
     onOpenAbout,
     onOpenProject,
     onOpenCertificates,
@@ -18,8 +19,8 @@ export default function DesktopLayout({
     return (
         <div className={`${styles.imageWrapper} ${styles[theme]}`}>
             <TitleButton
-                handle={profile.handle}
                 onClick={onOpenPortfolioInfo}
+                ui={ui}
             />
 
             <AboutMeButton
@@ -28,10 +29,8 @@ export default function DesktopLayout({
                 onClick={onOpenAbout}
             />
 
-            <ThemeToggle
-                theme={theme}
-                toggleTheme={toggleTheme}
-            />
+            <ThemeToggle ui={ui} />
+            <LanguageToggle />
 
             {projects.map((project) => (
                 <ProjectButton

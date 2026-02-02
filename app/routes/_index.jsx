@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
-import { projects } from '../data/projects'
-import { profile, certificates } from '../data/profile'
+import { useData } from '../hooks/useData'
 import DesktopLayout from '../components/portfolio/DesktopLayout'
 import MobileLayout from '../components/portfolio/MobileLayout'
 import { ProjectModal, AboutModal, PortfolioInfoModal, CertificatesModal } from '../components/portfolio/Modal'
@@ -16,6 +15,7 @@ export const meta = () => {
 
 export default function Home() {
   const { theme, toggleTheme } = useTheme()
+  const { profile, certificates, projects, ui } = useData()
   const [activeProject, setActiveProject] = useState(null)
   const [aboutOpen, setAboutOpen] = useState(false)
   const [certificatesOpen, setCertificatesOpen] = useState(false)
@@ -34,10 +34,10 @@ export default function Home() {
     <div className={styles.homeContainer}>
       <DesktopLayout
         theme={theme}
-        toggleTheme={toggleTheme}
         profile={profile}
         projects={projects}
         certificates={certificates}
+        ui={ui}
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
@@ -46,10 +46,10 @@ export default function Home() {
 
       <MobileLayout
         theme={theme}
-        toggleTheme={toggleTheme}
         profile={profile}
         projects={projects}
         certificates={certificates}
+        ui={ui}
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
@@ -59,24 +59,28 @@ export default function Home() {
       <ProjectModal
         project={activeProject}
         onClose={closeProject}
+        ui={ui}
       />
 
       <AboutModal
         profile={profile}
         isOpen={aboutOpen}
         onClose={closeAbout}
+        ui={ui}
       />
 
       <CertificatesModal
         certificates={certificates.items}
         isOpen={certificatesOpen}
         onClose={closeCertificates}
+        ui={ui}
       />
 
       <PortfolioInfoModal
         profile={profile}
         isOpen={portfolioInfoOpen}
         onClose={closePortfolioInfo}
+        ui={ui}
       />
     </div>
   )

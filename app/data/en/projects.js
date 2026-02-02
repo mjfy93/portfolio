@@ -20,8 +20,8 @@ export const projects = [
             left: '703px',
             width: 'auto',
             height: '98.7px',
-            
-        }, 
+
+        },
         links: {
             github: 'https://github.com/mjfy93/LOTR-Blog',
             demo: 'https://lotr-blog.vercel.app/'

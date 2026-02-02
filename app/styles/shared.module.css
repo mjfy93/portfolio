@@ -46,8 +46,8 @@
   object-fit: cover;
 }
 
-.themeToggle:hover{
-  transform: scale(1.1)
+.themeToggle:hover {
+  transform: scale(1.1);
 }
 
 .themeTooltip {
@@ -92,11 +92,89 @@
   backdrop-filter: blur(4px);
 }
 
-
 .mobileThemeToggle img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* ===== LANGUAGE TOGGLE ===== */
+.languageToggle {
+  position: absolute;
+  top: 310px;
+  right: 47px;
+  padding: 0px;
+  background: none;
+  border: 2px white solid;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 44px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  transform: perspective(779px) rotateY(-30deg) rotate(7deg) skew(0deg, 6deg);
+}
+
+.languageToggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.languageToggle:hover {
+  transform: perspective(779px) rotateY(-30deg) rotate(7deg) skew(0deg, 6deg)
+    scale(1.1);
+}
+
+.langTooltip {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%) skew(0deg, -8deg) rotate(-8deg) rotateY(30deg)
+    rotateX(5deg);
+  background: rgba(0, 0, 0, 0.75);
+  color: #e0e0e0;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.languageToggle:hover .langTooltip {
+  opacity: 1;
+}
+
+.mobileLanguageToggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 60px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+
+.mobileLanguageToggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mobileLanguageToggle:hover .langTooltip {
+  opacity: 1;
 }
 
 /* ===== TITLE BUTTON ===== */
@@ -107,17 +185,18 @@
   background: rgba(0, 0, 0, 0.7);
   border: solid 1px white;
   border-radius: 4px;
-  padding: 12px 18px;
+  padding: 14px 19px;
   cursor: pointer;
   transition: background 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: calc(10ch + 50px);
 }
 
 .titleButton:hover {
   background: rgba(0, 0, 0, 0.85);
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .titleTooltip {
@@ -141,7 +220,7 @@
 }
 
 .titleLine {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-size: 1.2rem;
   color: #4ade80;
   white-space: nowrap;
@@ -152,25 +231,24 @@
 }
 
 .titleLine:first-child {
-  animation: 
-    typing1 1s steps(10) forwards;
+  animation: typing 1s steps(var(--chars)) 1s forwards;
 }
 
 .titleLine:nth-child(2) {
   animation:
-    typing2 0.9s steps(9) 1s forwards,
+    typingCursor 0.9s steps(var(--chars)) 1s forwards,
     blink 0.7s step-end 1s infinite;
 }
 
-@keyframes typing1 {
+@keyframes typing {
   to {
     width: 10ch;
   }
 }
 
-@keyframes typing2 {
+@keyframes typingCursor {
   to {
-    width: 9.6ch;
+    width: 10ch;
     border-right-color: #4ade80;
   }
 }
