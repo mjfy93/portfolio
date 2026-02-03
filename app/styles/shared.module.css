@@ -108,13 +108,13 @@
   border: 2px white solid;
   border-radius: 50%;
   cursor: pointer;
-  width: 44px;
+  width: 45px;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: visible;
-  transform: perspective(779px) rotateY(-30deg) rotate(7deg) skew(0deg, 6deg);
+  transform: perspective(400px) rotateX(10deg) rotateY(-30deg) rotate(-5deg) skew(-3deg, 2deg);
 }
 
 .languageToggle img {
@@ -124,7 +124,7 @@
 }
 
 .languageToggle:hover {
-  transform: perspective(779px) rotateY(-30deg) rotate(7deg) skew(0deg, 6deg)
+  transform: perspective(400px) rotateX(10deg) rotateY(-30deg) rotate(-5deg) skew(-3deg, 2deg)
     scale(1.1);
 }
 
@@ -132,8 +132,7 @@
   position: absolute;
   bottom: -28px;
   left: 50%;
-  transform: translateX(-50%) skew(0deg, -8deg) rotate(-8deg) rotateY(30deg)
-    rotateX(5deg);
+  transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.75);
   color: #e0e0e0;
   font-size: 0.75rem;

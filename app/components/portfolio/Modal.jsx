@@ -25,15 +25,24 @@ export function ProjectModal({ project, onClose, ui }) {
                             <h5>{project.name}</h5>
                             <h6>{project.description}</h6>
                         </div>
-                        {project.preview?.src && (
-                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className={styles.previewLink}>
+                        {project.preview?.src && (() => {
+                            const previewHref = project.preview.link || project.links.demo;
+                            return previewHref ? (
+                                <a href={previewHref} target="_blank" rel="noopener noreferrer" className={styles.previewLink}>
+                                    <img
+                                        className={styles.previewVideo}
+                                        src={project.preview.src}
+                                        alt={`${project.name} demo`}
+                                    />
+                                </a>
+                            ) : (
                                 <img
                                     className={styles.previewVideo}
                                     src={project.preview.src}
-                                    alt={`${project.name} demo`}
+                                    alt={`${project.name} preview`}
                                 />
-                            </a>
-                        )}
+                            );
+                        })()}
                     </div>
                     <ul>
                         {project.features.map((feature, index) => (

@@ -16,10 +16,10 @@ export const projects = [
             dark: '/buttons/tlor-button-dark.jpg'
         },
         position: {
-            top: '71.2px',
-            left: '703px',
+            top: '69px',
+            left: '705px',
             width: 'auto',
-            height: '98.7px',
+            height: '101px',
 
         },
         links: {
@@ -51,19 +51,20 @@ export const projects = [
             dark: '/buttons/translation-portfolio-dark.jpg'
         },
         position: {
-            top: '71.2px',
+            top: '70px',
             left: '980px',
             width: 'auto',
-            height: '98.7px',
-            border: 'none'
+            height: '100px',
+            
         }, links: {
-            english: 'https://docs.google.com/presentation/d/15BlfPgwqQeZAB6XCZDKYalOU9MfHRONh/edit?usp=sharing&ouid=106769692638695702916&rtpof=true&sd=true',
-            spanish: 'https://docs.google.com/presentation/d/13yd9Ry3AAAOdnYsjohOKe2r28GT_dCar3wb_6GUZfJY/edit?usp=sharing'
+            english: 'https://tinyurl.com/translatorportfolio-mjfy93',
+            spanish: 'https://tinyurl.com/portafolio-mjfy93'
         },
         preview: {
             type: 'img',
-            src: 'null',
-            poster: '/previews/portfolio-poster.png'
+            src: '/previews/portfolio-poster.png',
+            poster: '/previews/portfolio-poster.png',
+            link: 'https://tinyurl.com/translatorportfolio-mjfy93'
         },
         mobileColor: {
             light: '#05c1f0f3',
