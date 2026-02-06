@@ -55,7 +55,42 @@ export const projects = [
             left: '980px',
             width: 'auto',
             height: '100px',
-            
+
+        }, links: {
+            english: 'https://tinyurl.com/translatorportfolio-mjfy93',
+            spanish: 'https://tinyurl.com/portafolio-mjfy93'
+        },
+        preview: {
+            type: 'img',
+            src: '/previews/portfolio-poster.png',
+            poster: '/previews/portfolio-poster.png',
+            link: 'https://tinyurl.com/translatorportfolio-mjfy93'
+        },
+        mobileColor: {
+            light: '#05c1f0f3',
+            dark: '#05c1f034'
+        },
+        icon: 'book'
+    },
+    {
+        id: 'translation-portfolio',
+        name: 'Translation and Interpretation Portfolio',
+        shortName: 'T&I Portfolio',
+        description: 'Work and Experience as a Translator with 9+ years of experience and an Official Translator and Interpreter Certificate.',
+        features: [
+            'Translation Sample',
+            'Offering of services'
+        ],
+        buttonImages: {
+            light: '/buttons/translation-portfolio-light.jpg',
+            dark: '/buttons/translation-portfolio-dark.jpg'
+        },
+        position: {
+            top: '70px',
+            left: '980px',
+            width: 'auto',
+            height: '100px',
+
         }, links: {
             english: 'https://tinyurl.com/translatorportfolio-mjfy93',
             spanish: 'https://tinyurl.com/portafolio-mjfy93'

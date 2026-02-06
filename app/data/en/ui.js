@@ -17,6 +17,7 @@ export const ui = {
     certificates: 'Certificates',
     backToGallery: 'Back to Gallery',
     viewCertificate: 'View Certificate',
+    hoursLabel: 'Duration:',
 
     // TitleButton
     titleLine1: "@mjfy93's",

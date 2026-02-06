@@ -17,6 +17,7 @@ export const ui = {
     certificates: 'Certificados',
     backToGallery: 'Volver a la Galería',
     viewCertificate: 'Ver Certificado',
+    hoursLabel: 'Duración:',
 
     // TitleButton
     titleLine1: 'Portafolio ',

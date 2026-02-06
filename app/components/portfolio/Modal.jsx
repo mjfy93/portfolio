@@ -195,6 +195,9 @@ export function CertificatesModal({ certificates, isOpen, onClose, ui }) {
                                 alt={selectedCert.name}
                             />
                         )}
+                        {selectedCert.hours && (
+                            <p><strong>{ui.hoursLabel}</strong> {selectedCert.hours}</p>
+                        )}
                         <ul>
                             {selectedCert.techStack.map((item, index) => (
                                 <li key={index}>{item}</li>

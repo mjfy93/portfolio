@@ -81,6 +81,7 @@ export const certificates = {
                 'Back - end: Python, Flask, RESTful APIs, SQL, Object - Oriented Programming',
                 'Tools & Practices: Git / GitHub, Command Line, Unit Testing(Jest)'
             ],
+            hours: '360',
             link: 'https://certificate.4geeks.com/fc6cb0a39163f4321c049fc0c2ce3f19ca770b66',
             image: '/certificates/4geeks-bootcamp.png'
         },
@@ -94,6 +95,7 @@ export const certificates = {
                 'Speaking',
                 'Listening'
             ],
+            hours: null,
             link: "https://cert.efset.org/YKSU8S",
             image: '/certificates/efset-english-certificate.png'
         }, {
@@ -105,6 +107,20 @@ export const certificates = {
                 'Discover the structure of programming languages',
                 'Learn foundational programming concepts, practices, and terminology'
             ],
+            hours: null,
+            link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
+            image: '/certificates/microsoft-career-essentials.png'
+        },
+        {
+            id: 'fullstack-ai',
+            name: 'Workshop: fullstack with AI',
+            description: "A course designed to learn how to leverage AI to it's full potential and the skills necessary to do it well.",
+            techStack: [
+                'V0, Cursor, Claude AI',
+                'MVP development and business/project strategy',
+                'AI Assisted Development'
+            ],
+            hours: '10 hours(6 hours + 4 hours of independent study)',
             link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
             image: '/certificates/microsoft-career-essentials.png'
         },
