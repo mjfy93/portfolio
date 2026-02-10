@@ -78,7 +78,7 @@ export const certificates = {
                 'Back-end: Python, Flask, RESTful APIs, SQL, Programación Orientada a Objetos',
                 'Herramientas y Prácticas: Git/GitHub, Línea de Comandos, Pruebas Unitarias (Jest)'
             ],
-            hours: null,
+            hours: '360 horas',
             link: 'https://certificate.4geeks.com/fc6cb0a39163f4321c049fc0c2ce3f19ca770b66',
             image: '/certificates/4geeks-bootcamp.png'
         },
@@ -104,7 +104,7 @@ export const certificates = {
                 'Descubrir la estructura de los lenguajes de programación',
                 'Aprender conceptos, prácticas y terminología fundamentales de programación'
             ],
-            hours: null,
+            hours: '12 horas',
             link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
             image: '/certificates/microsoft-career-essentials.png'
         },
@@ -122,6 +122,84 @@ export const certificates = {
             image: '/certificates/microsoft-career-essentials.png'
         },
 
+        {
+            id: 'career-sales',
+            name: 'Prepárate para una Carrera en Ventas',
+            description: "Un curso diseñado para aprender a aprovechar la IA al máximo y las habilidades necesarias para hacerlo bien.",
+            techStack: [
+                'Efectividad en Ventas',
+                'Construcción de Relaciones'
+            ],
+            hours: '1 hora',
+            link: "https://www.linkedin.com/learning/certificates/feab2e2ebd5fc1cc204ff7606a18c71aacaedafd25df8264752c570f96676059?trk=share_certificate",
+            image: '/certificates/career-sales.png'
+        },
+        {
+            id: 'sales-foundations',
+            name: 'Fundamentos de Ventas',
+            description: "En este curso, el exlíder senior de Genentech y fundador de Braintrust, Jeff Bloomfield, explica por qué y cómo los mejores vendedores aprenden a ver a través de los ojos de sus clientes.",
+            techStack: [
+                'Venta de Soluciones',
+                'Enfoque en Procesos',
+                'Enfoque en el Cliente'
+            ],
+            hours: '1 hora',
+            link: "https://www.linkedin.com/learning/certificates/35b9661d8aefcfba514e470234697e4bdc33e3612d0476cbe5556d103efbbfe4?trk=share_certificate",
+            image: '/certificates/sales-foundations.png'
+        },
+
         //Nuevos certificados aquí - seguir la misma estructura
     ]
 }
+
+export const workHistory = {
+    shortName: 'Experiencia',
+    buttonImages: {
+        light: '/buttons/briefcase-light.png',
+        dark: '/buttons/briefcase-dark.png'
+    },
+    position: {
+        top: '480px',
+        left: '870px',
+        width: 'auto',
+        height: '160px'
+    },
+    mobileColor: {
+        light: '#2c3e50',
+        dark: '#34495eb3'
+    },
+    icon: 'briefcase',
+    items: [
+        {
+            id: 'fullstack-dev',
+            title: 'Desarrolladora Full Stack',
+            company: 'Independiente',
+            period: '11/2025 – Presente',
+            description: 'Diseño y desarrollo de aplicaciones web full-stack usando React.js, JavaScript, Python y Flask, mientras también profundizo en TypeScript, Angular y Next.js para ampliar mis herramientas. Enfocada en construir interfaces responsivas y centradas en el usuario con código limpio y mantenible.'
+        },
+        {
+            id: 'freelance-translator',
+            title: 'Traducción e Interpretación Freelance',
+            company: 'Independiente',
+            period: '03/2023 – Presente',
+            description: 'Entrega de traducciones de alta precisión bajo plazos ajustados, gestión integral de proyectos con clientes y provisión de interpretación en tiempo real para eventos internacionales. Habilidades transferibles clave: atención al detalle, resolución sistemática de problemas, adaptabilidad rápida y comunicación clara con stakeholders.'
+        },
+        {
+            id: 'oracle-pm',
+            title: 'Gerente de Proyectos de Traducción',
+            company: 'Oracle Colombia',
+            period: '09/2022 – 02/2023',
+            location: 'Bogotá, Colombia',
+            description: 'Comunicación interfuncional con stakeholders mediante coordinación con ejecutivos y líderes creativos, optimización de flujos de trabajo y aseguramiento de calidad liderando más de 15 traductores en 9 idiomas, y traducción de requerimientos de negocio en entregables accionables con entrega consistente a tiempo.'
+        },
+        {
+            id: 'oracle-translator',
+            title: 'Especialista en Traducción al Español',
+            company: 'Oracle Colombia',
+            period: '11/2020 – 09/2022',
+            location: 'Bogotá, Colombia',
+            description: 'Traducción y localización de contenido web y materiales de marketing asegurando consistencia de marca. Colaboración con equipos de marketing en documentación de productos y contenido de blog, gestionando actualizaciones en múltiples plataformas. Adaptación de documentación técnica en contenido claro y accesible para audiencias diversas. Habilidades transferibles clave: comprensión de la estructura de contenido web, control de versiones y comunicación técnica.'
+        }
+    ]
+}
+

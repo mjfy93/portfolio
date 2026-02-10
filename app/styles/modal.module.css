@@ -16,6 +16,8 @@
   max-width: 500px;
   width: 90%;
   position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
 .modalHeader {
@@ -175,7 +177,9 @@
   border-radius: 8px;
   padding: 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,4 +224,43 @@
 
 .backBtn:hover {
   color: #e0e0e0;
+}
+
+.workHistoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.workHistoryItem {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #3d4a6b;
+}
+
+.workHistoryItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.workHistoryItem h6 {
+  margin-bottom: 0.25rem;
+}
+
+.workHistoryItem p {
+  margin: 0.25rem 0;
+}
+
+.workHistoryCompany {
+  color: #a0a0a0;
+  font-weight: 500;
+}
+
+.workHistoryPeriod {
+  color: #8090b0;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem !important;
+}
+
+.workHistoryItemRight {
+  text-align: right;
 }

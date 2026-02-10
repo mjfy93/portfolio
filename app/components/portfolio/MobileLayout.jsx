@@ -11,10 +11,12 @@ export default function MobileLayout({
     profile,
     projects,
     certificates,
+    workHistory,
     ui,
     onOpenAbout,
     onOpenProject,
     onOpenCertificates,
+    onOpenWorkHistory,
     onOpenPortfolioInfo
 }) {
     return (
@@ -34,6 +36,15 @@ export default function MobileLayout({
                     onClick={onOpenAbout}
                 >
                     <FontAwesomeIcon icon={profile.aboutButton.icon} /> {profile.aboutButton.shortName}
+                </button>
+                <button
+                    className={styles.mobileFullWidthButton}
+                    style={{
+                        background: theme === 'dark' ? workHistory.mobileColor.dark : workHistory.mobileColor.light
+                    }}
+                    onClick={onOpenWorkHistory}
+                >
+                    <FontAwesomeIcon icon={workHistory.icon} /> {workHistory.shortName}
                 </button>
                 <button
                     className={styles.mobileFullWidthButton}

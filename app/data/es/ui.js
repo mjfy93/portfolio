@@ -13,6 +13,9 @@ export const ui = {
     // Modal - PortfolioInfoModal
     builtWith: 'Hecho Con',
 
+    // Modal - WorkHistoryModal
+    workHistory: 'Experiencia Laboral',
+
     // Modal - CertificatesModal
     certificates: 'Certificados',
     backToGallery: 'Volver a la Galería',

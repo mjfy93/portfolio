@@ -144,6 +144,26 @@ export function PortfolioInfoModal({ profile, isOpen, onClose, ui }) {
     )
 }
 
+export function WorkHistoryModal({ workHistory, isOpen, onClose, ui }) {
+    return (
+        <Modal isOpen={isOpen} onClose={onClose}>
+            <h5>{ui.workHistory}</h5>
+            <div className={styles.workHistoryList}>
+                {workHistory.map((job, index) => (
+                    <div key={job.id} className={`${styles.workHistoryItem} ${index % 2 !== 0 ? styles.workHistoryItemRight : ''}`}>
+                        <h6>{job.title}</h6>
+                        <p className={styles.workHistoryCompany}>
+                            {job.company}{job.location && ` | ${job.location}`}
+                        </p>
+                        <p className={styles.workHistoryPeriod}>{job.period}</p>
+                        <p>{job.description}</p>
+                    </div>
+                ))}
+            </div>
+        </Modal>
+    )
+}
+
 export function CertificatesModal({ certificates, isOpen, onClose, ui }) {
     const [selectedCert, setSelectedCert] = useState(null)
 

@@ -180,17 +180,17 @@
 .titleButton {
   position: absolute;
   top: 350px;
-  left: 878px;
+  left: 879px;
   background: rgba(0, 0, 0, 0.7);
   border: solid 1px white;
   border-radius: 4px;
-  padding: 14px 19px;
+  padding: 13px 21px;
   cursor: pointer;
   transition: background 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: calc(10ch + 50px);
+  min-width: calc(10ch + 63px);
 }
 
 .titleButton:hover {
@@ -220,13 +220,14 @@
 
 .titleLine {
   font-family: "Courier New", monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #4ade80;
   white-space: nowrap;
   overflow: hidden;
   display: block;
   border-right: 2px solid transparent;
   width: 0;
+  padding: 2px 0;
 }
 
 .titleLine:first-child {
@@ -241,13 +242,13 @@
 
 @keyframes typing {
   to {
-    width: 10ch;
+    width: calc(var(--chars) * 1ch);
   }
 }
 
 @keyframes typingCursor {
   to {
-    width: 10ch;
+    width: calc(var(--chars) * 1ch);
     border-right-color: #4ade80;
   }
 }

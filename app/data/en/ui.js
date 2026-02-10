@@ -13,6 +13,9 @@ export const ui = {
     // Modal - PortfolioInfoModal
     builtWith: 'Built With',
 
+    // Modal - WorkHistoryModal
+    workHistory: 'Work History',
+
     // Modal - CertificatesModal
     certificates: 'Certificates',
     backToGallery: 'Back to Gallery',
@@ -20,7 +23,7 @@ export const ui = {
     hoursLabel: 'Duration:',
 
     // TitleButton
-    titleLine1: "@mjfy93's",
+    titleLine1: "@mjfy93's ",
     titleLine2: 'Portfolio ',
     techStackTooltip: 'Tech Stack',
 

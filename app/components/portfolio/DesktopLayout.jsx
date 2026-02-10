@@ -10,10 +10,12 @@ export default function DesktopLayout({
     profile,
     projects,
     certificates,
+    workHistory,
     ui,
     onOpenAbout,
     onOpenProject,
     onOpenCertificates,
+    onOpenWorkHistory,
     onOpenPortfolioInfo
 }) {
     return (
@@ -58,6 +60,25 @@ export default function DesktopLayout({
                     style={{ height: '100%', width: 'auto' }}
                 />
                 <span className={styles.tooltip}>{certificates.shortName}</span>
+            </button>
+
+            <button
+                className={styles.certificateBtn}
+                style={{
+                    position: 'absolute',
+                    top: workHistory.position.top,
+                    left: workHistory.position.left,
+                    height: workHistory.position.height,
+                    width: workHistory.position.width
+                }}
+                onClick={onOpenWorkHistory}
+            >
+                <img
+                    src={theme === 'dark' ? workHistory.buttonImages.dark : workHistory.buttonImages.light}
+                    alt="Work History"
+                    style={{ height: '100%', width: 'auto', border: 'none' }}
+                />
+                <span className={styles.tooltip}>{workHistory.shortName}</span>
             </button>
         </div>
     )

@@ -3,7 +3,7 @@ import { useTheme } from '../context/ThemeContext'
 import { useData } from '../hooks/useData'
 import DesktopLayout from '../components/portfolio/DesktopLayout'
 import MobileLayout from '../components/portfolio/MobileLayout'
-import { ProjectModal, AboutModal, PortfolioInfoModal, CertificatesModal } from '../components/portfolio/Modal'
+import { ProjectModal, AboutModal, PortfolioInfoModal, CertificatesModal, WorkHistoryModal } from '../components/portfolio/Modal'
 import styles from '../styles/shared.module.css'
 
 export const meta = () => {
@@ -15,11 +15,12 @@ export const meta = () => {
 
 export default function Home() {
   const { theme, toggleTheme } = useTheme()
-  const { profile, certificates, projects, ui } = useData()
+  const { profile, certificates, workHistory, projects, ui } = useData()
   const [activeProject, setActiveProject] = useState(null)
   const [aboutOpen, setAboutOpen] = useState(false)
   const [certificatesOpen, setCertificatesOpen] = useState(false)
   const [portfolioInfoOpen, setPortfolioInfoOpen] = useState(false)
+  const [workHistoryOpen, setWorkHistoryOpen] = useState(false)
 
   const openProject = (project) => setActiveProject(project)
   const closeProject = () => setActiveProject(null)
@@ -29,6 +30,8 @@ export default function Home() {
   const closeCertificates = () => setCertificatesOpen(false)
   const openPortfolioInfo = () => setPortfolioInfoOpen(true)
   const closePortfolioInfo = () => setPortfolioInfoOpen(false)
+  const openWorkHistory = () => setWorkHistoryOpen(true)
+  const closeWorkHistory = () => setWorkHistoryOpen(false)
 
   return (
     <div className={styles.homeContainer}>
@@ -37,10 +40,12 @@ export default function Home() {
         profile={profile}
         projects={projects}
         certificates={certificates}
+        workHistory={workHistory}
         ui={ui}
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
+        onOpenWorkHistory={openWorkHistory}
         onOpenPortfolioInfo={openPortfolioInfo}
       />
 
@@ -49,10 +54,12 @@ export default function Home() {
         profile={profile}
         projects={projects}
         certificates={certificates}
+        workHistory={workHistory}
         ui={ui}
         onOpenAbout={openAbout}
         onOpenProject={openProject}
         onOpenCertificates={openCertificates}
+        onOpenWorkHistory={openWorkHistory}
         onOpenPortfolioInfo={openPortfolioInfo}
       />
 
@@ -73,6 +80,13 @@ export default function Home() {
         certificates={certificates.items}
         isOpen={certificatesOpen}
         onClose={closeCertificates}
+        ui={ui}
+      />
+
+      <WorkHistoryModal
+        workHistory={workHistory.items}
+        isOpen={workHistoryOpen}
+        onClose={closeWorkHistory}
         ui={ui}
       />
 
