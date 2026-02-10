@@ -47,7 +47,7 @@ export const profile = {
             dark: 'rgba(0, 0, 0, 0.45)'
         },
         icon: 'user',
-        shortName: 'Sobre Mí'
+        shortName: 'Sobre mí'
     }
 }
 
