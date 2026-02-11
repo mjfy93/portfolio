@@ -61,10 +61,10 @@ export const certificates = {
         dark: '/buttons/certificates-button-dark.png'
     },
     position: {
-        top: '120px',
+        top: '124px',
         left: '529px',
         width: 'auto',
-        height: '195px'
+        height: '180px'
     },
     mobileColor: {
         light: '#1a5276',
@@ -113,7 +113,7 @@ export const certificates = {
         },
         {
             id: 'fullstack-ai',
-            name: 'Workshop: fullstack with AI',
+            name: 'Workshop: Fullstack with AI',
             description: "A course designed to learn how to leverage AI to it's full potential and the skills necessary to do it well.",
             techStack: [
                 'V0, Cursor, Claude AI',
@@ -122,7 +122,7 @@ export const certificates = {
             ],
             hours: '10 hours',
             link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
-            image: '/certificates/microsoft-career-essentials.png'
+            image: 'https://placehold.co/600x400?text=Certicate+in+Progress'
         },
         {
             id: 'career-sales',
@@ -149,10 +149,8 @@ export const certificates = {
             link: "https://www.linkedin.com/learning/certificates/35b9661d8aefcfba514e470234697e4bdc33e3612d0476cbe5556d103efbbfe4?trk=share_certificate",
             image: '/certificates/sales-foundations.png'
         },
-
-
         //New certificates here - follow same structure
-        //
+       
     ]
 }
 
@@ -164,7 +162,7 @@ export const workHistory = {
     },
     position: {
         top: '480px',
-        left: '870px',
+        left: '840px',
         width: 'auto',
         height: '160px'
     },

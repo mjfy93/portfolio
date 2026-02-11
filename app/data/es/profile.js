@@ -110,16 +110,16 @@ export const certificates = {
         },
         {
             id: 'fullstack-ai',
-            name: 'Workshop: fullstack con IA',
+            name: 'Workshop: Fullstack con IA',
             description: "Un curso diseñado para aprender a aprovechar la IA al máximo y las habilidades necesarias para hacerlo bien.",
             techStack: [
                 'V0, Cursor, Claude AI',
                 'Desarrollo de MVP y estrategia de negocio/proyecto',
                 'Desarrollo Asistido por IA'
             ],
-            hours: '10 horas (6 horas + 4 horas de estudio independiente)',
+            hours: '10 horas',
             link: "https://www.linkedin.com/learning/certificates/5e29f4bb86030740ebdcc2fd340623d91f5891bc275c99ca5edb68fd15728b7f?trk=share_certificate",
-            image: '/certificates/microsoft-career-essentials.png'
+            image: 'https://placehold.co/600x400?text=Certicado+en+Proceso'
         },
 
         {
@@ -160,7 +160,7 @@ export const workHistory = {
     },
     position: {
         top: '480px',
-        left: '870px',
+        left: '840px',
         width: 'auto',
         height: '160px'
     },
