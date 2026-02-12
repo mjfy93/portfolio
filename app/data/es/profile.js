@@ -58,10 +58,10 @@ export const certificates = {
         dark: '/buttons/certificates-button-dark.png'
     },
     position: {
-        top: '120px',
+        top: '124px',
         left: '529px',
         width: 'auto',
-        height: '195px'
+        height: '180px'
     },
     mobileColor: {
         light: '#1a5276',
