@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import { Analytics } from '@vercel/analytics/react'
 import HtmlShell from './components/HtmlShell.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { LanguageProvider } from './context/LanguageContext.jsx'
@@ -11,6 +12,7 @@ export default function App() {
           <main >
             <Outlet />
           </main>
+          <Analytics />
         </HtmlShell>
       </ThemeProvider>
     </LanguageProvider>
