@@ -2,6 +2,8 @@ export const ui = {
     // Modal - ProjectModal
     code: 'Code',
     liveSite: 'Live Site',
+    inProgress: 'In Progress',
+    comingSoon: 'Coming Soon',
     english: 'English',
     spanish: 'Español',
 

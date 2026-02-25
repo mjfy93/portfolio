@@ -72,6 +72,48 @@ export const projects = [
         },
         icon: 'book'
     },
+    {
+        id: 'widgetsill',
+        name: 'WidgetSill',
+        shortName: 'WidgetSill',
+        description: 'WidgetSill is a lightweight, always-on-top desktop widget for Windows that brings essential information to your fingertips — no more switching between apps to check your calendar, weather, or control your music. This project is being built as part of an AI-assisted development workshop, using modern AI coding tools throughout the development process.',
+        features: [
+            'Calendar — View your Outlook events at a glance', 
+            'Weather — Current conditions with auto - location detection',
+            'Photo Slideshow — Display photos from any local folder',
+            'Reminders — Quick task management without leaving your desktop',
+            'Media Controls — Play, pause, and skip from any app',
+            'Calculator — Basic calculations always within reach',
+            'Light / Dark Theme — Easy on the eyes, day or night',
+            'Modular — Show only the widgets you need'
+        ],
+        buttonImages: {
+            light: '/buttons/widgetsill-light.jpg',
+            dark: '/buttons/widgetsill-dark.jpg'
+        },
+        position: {
+            top: '219px',
+            left: '760px',
+            width: 'auto',
+            height: '95px',
+
+        }, 
+        links: {
+            github: 'https://github.com/mjfy93/widgetsill',
+            demo: 'https://placehold.co/600x400?text=In+Progress'
+        },
+        preview: {
+            type: 'img',
+            src: '/buttons/widgetsill-logo.png',
+            poster: '/buttons/widgetsill-logo.png'
+        },
+        mobileColor: {
+            light: '#a5a3a3',
+            dark: '#7b7c7b'
+        },
+        status: 'in-progress',
+        icon: 'desktop'
+    },
    
     //New projects here - follow same structure
 ]

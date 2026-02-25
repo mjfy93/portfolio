@@ -22,11 +22,17 @@ export function ProjectModal({ project, onClose, ui }) {
                 <div>
                     <div className={styles.modalHeader}>
                         <div className={styles.modalTitleSection}>
-                            <h5>{project.name}</h5>
+                            <h5>
+                                {project.name}
+                                {project.status === 'in-progress' && (
+                                    <span className={styles.inProgressBadge}>{ui.inProgress}</span>
+                                )}
+                            </h5>
                             <h6>{project.description}</h6>
                         </div>
                         {project.preview?.src && (() => {
-                            const previewHref = project.preview.link || project.links.demo;
+                            const isInProgress = project.status === 'in-progress';
+                            const previewHref = isInProgress ? null : (project.preview.link || project.links.demo);
                             return previewHref ? (
                                 <a href={previewHref} target="_blank" rel="noopener noreferrer" className={styles.previewLink}>
                                     <img
@@ -58,11 +64,17 @@ export function ProjectModal({ project, onClose, ui }) {
                             </a>
                         )}
                         {project.links.demo && (
-                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                                <button className={styles.iconBtn}>
-                                    <FontAwesomeIcon icon="display" /> {ui.liveSite}
+                            project.status === 'in-progress' ? (
+                                <button className={styles.iconBtnDisabled} disabled>
+                                    <FontAwesomeIcon icon="display" /> {ui.comingSoon}
                                 </button>
-                            </a>
+                            ) : (
+                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                                    <button className={styles.iconBtn}>
+                                        <FontAwesomeIcon icon="display" /> {ui.liveSite}
+                                    </button>
+                                </a>
+                            )
                         )}
                         {project.links.english && (
                             <a href={project.links.english} target="_blank" rel="noopener noreferrer">

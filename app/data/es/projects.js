@@ -71,6 +71,48 @@ export const projects = [
             dark: '#05c1f034'
         },
         icon: 'book'
+    },
+    {
+        id: 'widgetsill',
+        name: 'WidgetSill',
+        shortName: 'WidgetSill',
+        description: 'WidgetSill es un widget de escritorio ligero y siempre visible para Windows que pone información esencial al alcance de tu mano — sin necesidad de cambiar entre aplicaciones para revisar tu calendario, el clima o controlar tu música. Este proyecto se desarrolla como parte de un taller de desarrollo asistido por IA, usando herramientas modernas de programación con IA a lo largo del proceso.',
+        features: [
+            'Calendario — Visualiza tus eventos de Outlook de un vistazo',
+            'Clima — Condiciones actuales con detección automática de ubicación',
+            'Presentación de fotos — Muestra fotos desde cualquier carpeta local',
+            'Recordatorios — Gestión rápida de tareas sin abandonar el escritorio',
+            'Controles multimedia — Reproduce, pausa y salta de canción desde cualquier app',
+            'Calculadora — Cálculos básicos siempre al alcance',
+            'Tema claro / oscuro — Agradable a la vista, de día o de noche',
+            'Modular — Muestra solo los widgets que necesitas'
+        ],
+        buttonImages: {
+            light: '/buttons/widgetsill-light.jpg',
+            dark: '/buttons/widgetsill-dark.jpg'
+        },
+        position: {
+            top: '219px',
+            left: '760px',
+            width: 'auto',
+            height: '95px',
+
+        },
+        links: {
+            github: 'https://github.com/mjfy93/widgetsill',
+            demo: 'https://placehold.co/600x400?text=In+Progress'
+        },
+        preview: {
+            type: 'img',
+            src: '/buttons/widgetsill-logo.png',
+            poster: '/buttons/widgetsill-logo.png'
+        },
+        mobileColor: {
+            light: '#a5a3a3',
+            dark: '#7b7c7b'
+        },
+        status: 'in-progress',
+        icon: 'desktop'
     }
     //Nuevos proyectos aquí - seguir la misma estructura
 ]
